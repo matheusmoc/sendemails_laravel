@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\MessageEmail; //template do email
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [EmailController::class, 'send']);
+
+Route::get('/', [EmailController::class, 'formulario'] )->name('formulario');
+Route::get('/conclusao', [EmailController::class, 'enviar']);
