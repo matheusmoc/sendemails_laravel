@@ -21,4 +21,4 @@ use App\Mail\MessageEmail; //template do email
 
 
 Route::get('/', [EmailController::class, 'formulario'] )->name('formulario');
-Route::get('/conclusao', [EmailController::class, 'enviar']);
+Route::post('/conclusao', [EmailController::class, 'enviar'])->name('conclusao.enviar');
